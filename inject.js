@@ -2,7 +2,7 @@ async function getWordWith(syllable) {
     const possibleWords = await (
         await fetch(`https://api.datamuse.com/words?sp=*${syllable}*`)
     ).json();
-    possibleWords.splice(0, 5); // max 5 words
+    possibleWords.splice(0, 5); // max 5 words.
 
     return possibleWords[Math.floor(Math.random() * possibleWords.length)].word;
 }
