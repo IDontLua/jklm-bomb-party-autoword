@@ -1,7 +1,10 @@
 async function getWordWith(syllable) {
-    return (await (await fetch(`https://api.datamuse.com/words?sp=*${syllable}*`)).json())[1][
-        "word"
-    ];
+    const possibleWords = await (
+        await fetch(`https://api.datamuse.com/words?sp=*${syllable}*`)
+    ).json();
+    possibleWords.splice(0, 5);
+
+    return possibleWords[Math.floor(Math.random() * possibleWords.length)].word;
 }
 
 (async function () {
