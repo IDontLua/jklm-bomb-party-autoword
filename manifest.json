@@ -1,0 +1,15 @@
+{
+    "name": "Not A BombParty Cheat",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Definitely doesn't auto-play bomb party for you.",
+    "homepage_url": "http://example.com",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_title": "Inject!"
+    },
+    "permissions": ["https://*.jklm.fun/*", "tabs"]
+}
